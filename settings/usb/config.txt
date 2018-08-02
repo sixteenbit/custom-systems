@@ -1,0 +1,42 @@
+# For more options and information see
+# http://rpf.io/configtxt
+# Some settings may impact device functionality. See link above for details
+
+# uncomment the following to adjust overscan. Use positive numbers if console
+# goes off screen, and negative if there is too much border
+#overscan_left=16
+#overscan_right=16
+#overscan_top=16
+#overscan_bottom=16
+
+# Additional overlays and parameters are documented /boot/overlays/README
+
+# Enable audio (loads snd_bcm2835)
+dtparam=audio=on
+gpu_mem_256=128
+gpu_mem_512=256
+gpu_mem_1024=256
+overscan_scale=1
+dtparam=i2c_arm=on
+
+# Disable Pi Status LED
+dtparam=act_led_trigger=none
+dtparam=act_led_activelow=on
+
+# Disable Bluetooth
+# dtoverlay=pi3-disable-bt
+
+# Disable Rainbow Splash
+disable_splash=1
+
+# Overclocking
+arm_freq=1000
+gpu_freq=500
+core_freq=500
+sdram_freq=500
+sdram_schmoo=0x02000020
+over_voltage=2
+sdram_over_voltage=2
+
+# Rotate display
+display_rotate=2
